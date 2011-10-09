@@ -11,8 +11,15 @@
 
  require('include/database.inc.pl');
 
-my $sql = "SELECT * FROM attendees INNER JOIN tickets ON (attendees.attendee_id = tickets.ticket_attendee_id_fk) WHERE tickets.ticket_event_id_fk = 1 AND tickets.ticket_paid = TRUE AND tickets.ticket_sent = FALSE;";
-#my $sql = "SELECT * FROM attendees INNER JOIN tickets ON (attendees.attendee_id = tickets.ticket_attendee_id_fk) WHERE tickets.ticket_event_id_fk = 1 AND attendees.attendee_id = 5;";
+my $event_id = 1;
+
+## Read in the body text for the email in which the ticket will be sent.
+open(MESSAGE, "./include/email/with-ticket.txt");
+my $msgbody = do { local $/; <MESSAGE> };
+close(MESSAGE);
+
+#my $sql = "SELECT * FROM attendees INNER JOIN tickets ON (attendees.attendee_id = tickets.ticket_attendee_id_fk) WHERE tickets.ticket_event_id_fk = " . $event_id . " AND tickets.ticket_paid = TRUE AND tickets.ticket_sent = FALSE;";
+my $sql = "SELECT * FROM attendees INNER JOIN tickets ON (attendees.attendee_id = tickets.ticket_attendee_id_fk) WHERE tickets.ticket_event_id_fk = 1 AND attendees.attendee_id = 5;";
 my $sth = $main::dbh->prepare($sql);
 $sth->execute();
 my $attendees = $sth->fetchall_hashref('attendee_id');
@@ -22,7 +29,7 @@ $sth = $main::dbh->prepare($sql);
 $sth->execute();
 my $settings = $sth->fetchrow_hashref();
 
-$sql = "SELECT * FROM events WHERE event_id = 1;";
+$sql = "SELECT * FROM events WHERE event_id = " . $event_id . ";";
 $sth = $main::dbh->prepare($sql);
 $sth->execute();
 my $event = $sth->fetchrow_hashref();
@@ -93,17 +100,19 @@ foreach ( keys(%$attendees) )
 	my $msg = MIME::Lite->new(
 		From    => 'tickets@plug.org.au',
 		To      => $attendees->{$_}{'attendee_email'},
-		Subject => 'Ticket for The Joy of Coding by Rusty Russell',
+		Subject => 'Ticket for ' . $event->{'event_name'} . ' by ' . $event->{'event_speaker'},
 		Type    => 'multipart/mixed',
 	);
 
-	open(MESSAGE, "./email-message.txt");
-	my $msgbody = <MESSAGE>;
-	close(MESSAGE);
+	## Replace markers in the message with database fields
+	my $msgbody_personal = $msgbody;
+
+	$msgbody_personal =~ s/\[givenname\]/$attendees->{$_}{'attendee_givenname'}/g;
+	$msgbody_personal =~ s/\[surname\]/$attendees->{$_}{'attendee_surname'}/g;
+
 	$msg->attach(
 		Type     => 'TEXT',
-#		Data     => $msgbody,
-		Path	=> "./email-message.txt"
+		Data     => $msgbody_personal,
 	);
 
 	$msg->attach(

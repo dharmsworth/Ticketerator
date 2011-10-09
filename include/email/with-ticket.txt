@@ -1,0 +1,35 @@
+Hi [givenname] [surname]!
+
+It's now less than a week until Paul "Rusty" Russell is here to give a PLUG talk, so it's time to get all the details straight for the evening.
+
+Firstly, thank you very much for supporting PLUGs effort to bring in a world-class speaker. This is the first time that PLUG has explicitly brought a speaker to Perth since it hosted Linux.conf.au in 2003. For an organisation that had just 22 members in January 2010, this was a big undertaking. PLUG now has over 75 members, and has an active group of people producing and live-streaming videos of tech presentations for the more remote members of PLUG up and down Western Australia, and those who have gone interstate and overseas. 
+
+It was a cunning plan to bring Rusty to Perth, and he's been very kind to volunteer to come and talk to us. We knew there would be costs involved in doing this, and had to make a tough decision to either chew through PLUGs reserves to do this, or ask members to put $20 in the pot to cover it. In a quite democratic way, it was put to the audience at the PLUG meeting in May 2010, and pretty much all present voted in favour of splitting the cost this way.
+
+Thanks to Dr Chris McDonald at UWA Computer Science, we're lucky enough to have access to the Geography & Geology Lecture Theatre #1, located on the 1st floor of the Geog/Geol Department (building 225, maps.uwa.edu.au, between the UWA Computer Science department and the Tropical Grove by Winthrop Tower). There will be PLUG signs up around the building on the evening. Free parking in yellow (student) and red (staff) bays starts from 5pm. The closest car parks are by Fairway entrance #1, car parks #18 and #20. Closest bus stop on Mounts Bay Road is #10389 from the city, or #10381 from Fremantle. Note: This is NOT at the UCC/Cameron Hall.
+
+Here is a map (http://g.co/maps/7rv9n) indicating the venue (green pin), and the closest parking (blue P). Note the red exclamation hovering over the UCC!
+
+Agenda for the evening
+6:00pm Doors open
+6:30pm Introductions & Rusty Russell "Coding: Lets have fun!"
+8:00pm Dinner (pizza; included in your admission; vegetarian pizzas will be available, please contact us if you cannot eat pizza!)
+8:30pm Panel discussion: "The State & Future of Linux & Open Source in Australia"
+9:30pm-9:45pm Finish
+
+Your ticket is attached. Please print and bring it, or show it on a suitable device (smartphone, tablet, etc). If you have a uni CS/IT student ticket, please bring your student ID card as well.
+
+Your input - questions, feedback, comments will be needed on the night!
+
+
+PLUG actively encourages (depends upon) local developers and contributors to step forward and give a tech talk on something they have worked on or had experience with. This is a great stepping stone to practice presentations before taking on larger conferences, and stimulates interesting discussions and feedback. A pretty standard evening presentation is around an hour long, but if you've just got an idea and would like to give a 5 minute (or less) "lightning talk", then we can do that too. If you have something you'd like to talk about,  let PLUG committee know and schedule you in. 
+
+PLUG is here to be a "local" (or indeed, regional) focal point for the local Linux & Open Source communities, but it needs your support.  By reviving PLUG to a healthy level, we hope that one day it will be able to once again bring the worlds top open source developers and contributors back to Perth. If this sounds like a long term plan you'd like to help with, then please help.
+
+PLUG is a non-profit volunteer run association. I'd like to thank Daniel Harmsworth for organising the ticketing for this event, and the support from the membership for this to happen. We're hoping you'll enjoy listening to, and talking with our special guests.  Please check the PLUG calendar of events on the PLUG web site; we have a summer BBQ planned for Sunday 4th December in Kings Park, and there's a good chance the PLUG Quiz Night will be back in 2012 as well.
+
+
+See you on Tuesday 11th October.
+
+
+The PLUG Committee
