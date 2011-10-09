@@ -18,8 +18,8 @@ open(MESSAGE, "./include/email/with-ticket.txt");
 my $msgbody = do { local $/; <MESSAGE> };
 close(MESSAGE);
 
-#my $sql = "SELECT * FROM attendees INNER JOIN tickets ON (attendees.attendee_id = tickets.ticket_attendee_id_fk) WHERE tickets.ticket_event_id_fk = " . $event_id . " AND tickets.ticket_paid = TRUE AND tickets.ticket_sent = FALSE;";
-my $sql = "SELECT * FROM attendees INNER JOIN tickets ON (attendees.attendee_id = tickets.ticket_attendee_id_fk) WHERE tickets.ticket_event_id_fk = 1 AND attendees.attendee_id = 5;";
+my $sql = "SELECT * FROM attendees INNER JOIN tickets ON (attendees.attendee_id = tickets.ticket_attendee_id_fk) WHERE tickets.ticket_event_id_fk = " . $event_id . " AND tickets.ticket_paid = TRUE AND tickets.ticket_sent = FALSE;";
+#my $sql = "SELECT * FROM attendees INNER JOIN tickets ON (attendees.attendee_id = tickets.ticket_attendee_id_fk) WHERE tickets.ticket_event_id_fk = 1 AND attendees.attendee_id = 5;";
 my $sth = $main::dbh->prepare($sql);
 $sth->execute();
 my $attendees = $sth->fetchall_hashref('attendee_id');
